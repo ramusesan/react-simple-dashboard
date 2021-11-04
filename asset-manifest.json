@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ramusesan/react-simple-dashboard/static/css/main.c87a350a.chunk.css",
+    "main.js": "/ramusesan/react-simple-dashboard/static/js/main.5a391da4.chunk.js",
+    "main.js.map": "/ramusesan/react-simple-dashboard/static/js/main.5a391da4.chunk.js.map",
+    "runtime-main.js": "/ramusesan/react-simple-dashboard/static/js/runtime-main.80e27f5a.js",
+    "runtime-main.js.map": "/ramusesan/react-simple-dashboard/static/js/runtime-main.80e27f5a.js.map",
+    "static/js/2.e82e7c57.chunk.js": "/ramusesan/react-simple-dashboard/static/js/2.e82e7c57.chunk.js",
+    "static/js/2.e82e7c57.chunk.js.map": "/ramusesan/react-simple-dashboard/static/js/2.e82e7c57.chunk.js.map",
+    "static/js/3.94b5edeb.chunk.js": "/ramusesan/react-simple-dashboard/static/js/3.94b5edeb.chunk.js",
+    "static/js/3.94b5edeb.chunk.js.map": "/ramusesan/react-simple-dashboard/static/js/3.94b5edeb.chunk.js.map",
+    "index.html": "/ramusesan/react-simple-dashboard/index.html",
+    "static/css/main.c87a350a.chunk.css.map": "/ramusesan/react-simple-dashboard/static/css/main.c87a350a.chunk.css.map",
+    "static/js/2.e82e7c57.chunk.js.LICENSE.txt": "/ramusesan/react-simple-dashboard/static/js/2.e82e7c57.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/ramusesan/react-simple-dashboard/static/media/auth_bg.b9a92a4f.jpg",
+    "static/media/profile.css": "/ramusesan/react-simple-dashboard/static/media/avatar.0d14c699.png",
+    "static/media/spinner.1baf7e2b.gif": "/ramusesan/react-simple-dashboard/static/media/spinner.1baf7e2b.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.80e27f5a.js",
+    "static/js/2.e82e7c57.chunk.js",
+    "static/css/main.c87a350a.chunk.css",
+    "static/js/main.5a391da4.chunk.js"
+  ]
+}
