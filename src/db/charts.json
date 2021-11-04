@@ -1,0 +1,160 @@
+{
+  "geoChart": {
+    "data": [
+      ["Country", "Popularity"],
+      ["Germany", 200],
+      ["United States", 300],
+      ["Brazil", 400],
+      ["Canada", 500],
+      ["France", 600],
+      ["RU", 700],
+      ["India", 300]
+    ]
+  },
+  "numberRangeChart": {
+    "data": [
+      ["Name", "Age"],
+      ["Michael", 12],
+      ["Elisa", 20],
+      ["Robert", 7],
+      ["John", 54],
+      ["Jessica", 22],
+      ["Aaron", 3],
+      ["Margareth", 42],
+      ["Miranda", 33]
+    ]
+  },
+  "comboChart": {
+    "data": [
+      [
+        "Month",
+        "Bolivia",
+        "Ecuador",
+        "Madagascar",
+        "Papua New Guinea",
+        "Rwanda",
+        "Average"
+      ],
+      ["2004/05", 165, 938, 522, 998, 450, 614.6],
+      ["2005/06", 135, 1120, 599, 1268, 288, 682],
+      ["2006/07", 157, 1167, 587, 807, 397, 623],
+      ["2007/08", 139, 1110, 615, 968, 215, 609.4],
+      ["2008/09", 136, 691, 629, 1026, 366, 569.6]
+    ]
+  },
+  "pieChart": {
+    "data": [
+      ["Task", "Hours per Day"],
+      ["Work", 11],
+      ["Eat", 2],
+      ["Commute", 2],
+      ["Watch TV", 2],
+      ["Sleep", 7]
+    ]
+  },
+  "dateRangeFilterChart": {
+    "data": [
+      ["Extrasolar planet", "Comment", "Year"],
+      [
+        "Gamma Cephei Ab",
+        "Deduced from radial velocity variations of the star Gamma Cephei",
+        "01-01-1991"
+      ],
+      ["HD 114762 b", "At least 11 times the mass of Jupiter", "01-01-1991"],
+      [
+        "PSR B1257+12",
+        "First confirmed discovery of an extrasolar planet",
+        "01-01-1991"
+      ],
+      ["51 Pegasi b", "Hot Jupiter with a 4.2 day orbit", "01-01-1991"],
+      [
+        "47 Ursae Majoris b",
+        "First long-period planet discovered",
+        "01-01-1991"
+      ],
+      [
+        "Upsilon Andromedae",
+        "First multiple planetary system around a main sequence star",
+        "01-01-1991"
+      ],
+      ["Gliese 876 b", "First planet found orbiting a red dwarf", "01-01-1991"],
+      [
+        "HD 209458 b",
+        "First exoplanet seen transiting its parent star",
+        "01-01-1991"
+      ],
+      [
+        "Iota Draconis b",
+        "Provided evidence that planets can exist around giant stars",
+        "01-01-1991"
+      ],
+      [
+        "PSR B1620-26 b",
+        "12.7 billion year old planet orbiting a binary star system",
+        "01-01-1991"
+      ],
+      ["2M1207 b", "First planet found orbiting a brown dwarf", "01-01-1991"],
+      ["Mu Arae c", "Hot Neptune", "01-01-1991"],
+      [
+        "TrES-1 and HD 209458 b",
+        "First detection of light from exoplanets",
+        "01-01-1991"
+      ],
+      [
+        "OGLE-2005-BLG-390Lb",
+        "Detected used gravitational microlensing",
+        "01-01-1991"
+      ]
+    ]
+  },
+  "tableChart": {
+    "data": [
+      [
+        {
+          "type": "string",
+          "label": "Name"
+        },
+        {
+          "type": "number",
+          "label": "Salary"
+        },
+        {
+          "type": "boolean",
+          "label": "Full Time Employee"
+        }
+      ],
+      [
+        "Mike",
+        {
+          "v": 10000,
+          "f": "$10,000"
+        },
+        true
+      ],
+      [
+        "Jim",
+        {
+          "v": 8000,
+          "f": "$8,000"
+        },
+        false
+      ],
+      [
+        "Alice",
+        {
+          "v": 12500,
+          "f": "$12,500"
+        },
+        true
+      ],
+      [
+        "Bob",
+        {
+          "v": 7000,
+          "f": "$7,000"
+        },
+        true
+      ]
+    ]
+  }
+}

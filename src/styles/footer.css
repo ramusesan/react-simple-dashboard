@@ -1,0 +1,12 @@
+#footer-container {
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background: #081f2c29;
+  width: 100%;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}

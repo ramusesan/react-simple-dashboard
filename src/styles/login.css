@@ -1,0 +1,12 @@
+.auth-container {
+  position: absolute;
+  border: 1pxsolid #fff;
+  background-color: #fff;
+  padding: 30px;
+  left: 50%;
+  top: 50%;
+  border-radius: 5px;
+  margin: -150px 0 0 -200px;
+  
+}
+

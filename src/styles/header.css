@@ -1,0 +1,75 @@
+#header-container {
+  height: 40px;
+  background-color: #043754;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+#nav-container {
+  background-color: #82b1cb;
+  color: #fff;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  padding: 15px;
+  top: 40px;
+  opacity: 0.9;
+}
+
+.show-nav-menu {
+  left: 0;
+  transition: all ease-in 1s;
+}
+
+.hide-nav-menu {
+  left: -200px;
+  transition: all ease-in 0.5s;
+}
+
+#menu-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/menu.png");
+  position: absolute;
+  top: 4px;
+  left: 11px;
+  cursor: pointer;
+}
+#menu-icon:hover {
+  background-color: #30698a;
+  border-radius: 4px;
+}
+
+#logout-icon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 10000;
+  background-image: url("../assets/logout.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+#greet-user {
+  font-size: 12px;
+  font-style: italic;
+  color: yellow;
+  right: 150px;
+  position: absolute;
+  top: 12px;
+}
+
+#nav-links li {
+  line-height: 35px;
+}

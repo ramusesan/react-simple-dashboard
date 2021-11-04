@@ -1,0 +1,43 @@
+import React from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import { getUserData } from "../utils/user";
+
+export default class SidebarExample extends React.Component {
+  render() {
+    const showMenu = this.props.showMenu;
+    const containerClass = showMenu ? "show-nav-menu" : "hide-nav-menu";
+    const USER = getUserData();
+
+    return (
+      <Router>
+        <div id="nav-container" className={containerClass}>
+          <ul id="nav-links" style={{ listStyleType: "none", padding: 0 }}>
+            <li>
+              <Link to="/dashboard" onClick={this.props.gotoDashboard}>
+                Home
+              </Link>
+            </li>
+            {USER.role === "admin" ? (
+              <li>
+                <Link to="/settings" onClick={this.props.gotoSettings}>
+                  Settings
+                </Link>
+              </li>
+            ) : (
+              ""
+            )}
+            <li>
+              <Link to="/userprofile" onClick={this.props.gotoUserProfile}>
+                Profile
+              </Link>
+            </li>
+          </ul>
+          <hr />
+          <ul style={{ listStyleType: "none", padding: 0 }}>
+            <li onClick={this.onLogout}>Logout</li>
+          </ul>
+        </div>
+      </Router>
+    );
+  }
+}

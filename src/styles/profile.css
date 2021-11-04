@@ -1,0 +1,57 @@
+#user-profile-main {
+  margin-top: 70px;
+}
+
+#user-profile-container {
+  height: 80vh;
+  background: #fff;
+  width: 70%;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+}
+
+#user-avator-section {
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+#user-avatar {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+  top: 60px;
+  border-radius: 50%;
+  background-image: url("../assets/avatar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#user-details {
+  width: 70%;
+  height: 100%;
+}
+
+#user-avator-section::after {
+  width: 1px;
+  height: 80%;
+  background-color: #043754;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 45px;
+  margin: auto;
+}
+
+#details {
+  position: relative;
+  top: 75px;
+  font-size: 15px;
+  left: 45px;
+}
+
+#details > label {
+  line-height: 40px;
+}
