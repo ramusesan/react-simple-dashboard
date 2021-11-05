@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import FormLayout from "../Layout/FormLayout";
 import "../../styles/login.css";
+import { setUserSession } from "../utils/user";
+import { isSessionExist } from "../utils/user";
 
 class Login extends Component {
   constructor(props) {
@@ -15,7 +17,12 @@ class Login extends Component {
     };
   }
 
+
+
   componentDidMount() {
+    if (isSessionExist()) {
+      this.setState({ loginSucces: true });
+    }
     const adminData = [
       {
         email: "admin@gmail.com",
@@ -24,7 +31,13 @@ class Login extends Component {
         password: "admin",
       },
     ];
-    localStorage.setItem("users", JSON.stringify(adminData));
+
+    var existingUsers =
+      JSON.parse(JSON.stringify(localStorage.getItem("users"))) || [];
+    if (existingUsers.length === 0) {
+      localStorage.setItem("users", JSON.stringify(adminData));
+    }
+
     this.setState({
       userName: localStorage.getItem("rememberUser"),
       password: "",
@@ -60,6 +73,7 @@ class Login extends Component {
 
     if (userExist[0]) {
       this.setState({ loginSucces: true });
+      setUserSession(this.state.userName);
       localStorage.setItem("currentUser", JSON.stringify(userExist[0]));
       if (this.state.rememberMe) {
         localStorage.setItem("rememberUser", this.state.userName);

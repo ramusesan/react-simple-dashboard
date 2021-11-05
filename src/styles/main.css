@@ -23,7 +23,7 @@
 .auth-error-msg {
   color: red;
   padding: 0;
-  margin: 0;
+  margin: 0px 5px;
   font-size: 10px;
 }
 
@@ -52,7 +52,7 @@ button {
 #no-chart__msg {
   position: absolute;
   top: 20%;
-  left: 40%;
+  left: 35%;
   font-size: 25px;
   font-weight: bold;
   color: #043754d1;

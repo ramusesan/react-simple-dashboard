@@ -56,7 +56,7 @@ export default class Settings extends React.Component {
                           type="checkbox"
                           checked={chart.checked}
                           name={chart.name}
-                          onClick={this.handleChange.bind(this, chart.name)}
+                          onChange={this.handleChange.bind(this, chart.name)}
                         />
                       </td>
                     </tr>

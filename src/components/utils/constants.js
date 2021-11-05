@@ -1,14 +1,14 @@
-import BarChart from "../Charts/BarChart";
 import PieChart from "../Charts/PieChart";
-import LineChart from "../Charts/LineChart";
 import NumberRangeChart from "../Charts/NumberRangeChart";
 import GeoChart from "../Charts/GeoChart";
 import ComboChart from "../Charts/ComboChart";
 import DateRangeFilterChart from "../Charts/DateRangeFilterChart";
-import TimeLineChart from "../Charts/TimeLineChart";
 import TableChart from "../Charts/TableChart";
+// import BarChart from "../Charts/BarChart";
+// import TimeLineChart from "../Charts/TimeLineChart";
+// import LineChart from "../Charts/LineChart";
 
-const FAKE_JSON = require("../../db/charts.json")
+const FAKE_JSON = require("../../db/charts.json");
 const {
   geoChart,
   numberRangeChart,
@@ -72,8 +72,11 @@ export const chartLists = () => {
 export const compontList = {
   geoChart: { component: GeoChart, data: geoChart },
   numberRangeChart: { component: NumberRangeChart, data: numberRangeChart },
-  comboChart: { component: ComboChart, data: comboChart},
-  pieChart: { component: PieChart, data: pieChart},
-  dateRangeFilterChart: { component: DateRangeFilterChart, data: dateRangeFilterChart },
+  comboChart: { component: ComboChart, data: comboChart },
+  pieChart: { component: PieChart, data: pieChart },
+  dateRangeFilterChart: {
+    component: DateRangeFilterChart,
+    data: dateRangeFilterChart,
+  },
   tableChart: { component: TableChart, data: tableChart },
 };

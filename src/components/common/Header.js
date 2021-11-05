@@ -1,9 +1,9 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import SideNav from "../dashboard/SideNav";
 import { getUserData } from "../utils/user";
 import "../../styles/header.css";
-
-import { Redirect } from "react-router-dom";
+import { isSessionExist, removeUserSession } from "../utils/user";
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -17,25 +17,51 @@ export default class Header extends React.Component {
     };
   }
 
+  componentDidMount() {
+    if (!isSessionExist()) {
+      this.onLogout();
+    }
+  }
   onToggleNavMenu = () => {
     this.setState((prevState) => {
       return { showNavMenu: !prevState.showNavMenu };
     });
   };
 
+  closeNavMenu = () => {
+    if (this.state.showNavMenu) {
+      this.setState((prevState) => {
+        return { showNavMenu: false };
+      });
+    }
+  };
+
   onLogout = () => {
+    removeUserSession();
     this.setState({ logout: true });
   };
 
   gotoDashboard = () => {
+    const currntUrl = window.location.pathname;
+    if (currntUrl === "/dashboard") {
+      return;
+    }
     this.setState({ dashboard: true });
   };
 
   gotoUserProfile = () => {
+    const currntUrl = window.location.pathname;
+    if (currntUrl === "/userprofile") {
+      return;
+    }
     this.setState({ userProfile: true });
   };
 
   gotoSettings = () => {
+    const currntUrl = window.location.pathname;
+    if (currntUrl === "/settings") {
+      return;
+    }
     this.setState({ settings: true });
   };
 
@@ -43,7 +69,7 @@ export default class Header extends React.Component {
     const { logout, userProfile, settings, dashboard } = this.state;
 
     const sessionUser = getUserData();
-    console.log("sessionUser", sessionUser);
+
     if (logout) {
       return <Redirect to="/" />;
     }
@@ -58,13 +84,14 @@ export default class Header extends React.Component {
     if (settings) {
       return <Redirect to="/settings" />;
     }
+
     return (
       <section>
         <div id="header-container">
           <span id="menu-icon" onClick={this.onToggleNavMenu}>
             {" "}
           </span>
-          <span id="greet-user"> Welcome {sessionUser.userName || null } </span>
+          <span id="greet-user"> Welcome {sessionUser.userName || null} </span>
           <span id="logout-icon" onClick={this.onLogout}></span>
         </div>
         <SideNav
@@ -72,6 +99,8 @@ export default class Header extends React.Component {
           gotoUserProfile={this.gotoUserProfile}
           gotoSettings={this.gotoSettings}
           gotoDashboard={this.gotoDashboard}
+          closeNavMenu={this.closeNavMenu}
+          onLogout={this.onLogout}
         />
       </section>
     );

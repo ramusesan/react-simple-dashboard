@@ -37,11 +37,14 @@ class Signup extends Component {
 
   onSignUp = (event) => {
     event.preventDefault();
-    console.log(this.state);
     if (this.state.userName === "") {
       this.setState({ errorMsg: "Please enter username" });
     } else if (this.state.emailId === "") {
       this.setState({ errorMsg: "Please enter email Id" });
+    } else if (this.state.password !== "" && this.state.password.length < 8) {
+      this.setState({
+        errorMsg: "Your password must be atleast minimum 8 characters",
+      });
     } else if (
       this.state.password === "" ||
       this.state.confirmPassword === ""
@@ -84,10 +87,15 @@ class Signup extends Component {
   toggleModel = (redirect = false) => {
     this.setState((prevState) => {
       return {
-        popUpMsg: "",
+        popUpMsg: "Account created successfully",
         showPopupModel: !prevState.showPopupModel,
-        signupSuccess: true,
       };
+    });
+  };
+
+  clodeModel = () => {
+    this.setState({
+      signupSuccess: true,
     });
   };
 
